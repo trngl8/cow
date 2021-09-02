@@ -2,6 +2,6 @@
 
 Cow is the class of animals.
 
-Cow can eat grass (herb) and make milk.
+Cow can eat grass (herb) and produce milk.
 
-Make milk can only female cows.
+Only female cows can produce milk.
