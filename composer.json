@@ -1,5 +1,8 @@
 {
     "require": {
         "php": ">=7.4"
+    },
+    "autoload": {
+        "app/cow" : "\\"
     }
 }
