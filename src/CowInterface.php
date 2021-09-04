@@ -1,6 +1,6 @@
 <?php
 
-namespace app\cow;
+namespace App;
 
 interface CowInterface
 {
