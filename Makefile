@@ -5,5 +5,5 @@ setup:
 .PHONY: setup
 
 tests:
-	php vendor/bin/phpunit CowTest.php
+	php vendor/bin/phpunit tests
 .PHONY: tests
