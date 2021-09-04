@@ -8,7 +8,7 @@ class CowTest extends TestCase
     {
         $cow = new Cow();
 
-        $this->assertSame(true);
+        $this->assertTrue(gottrue);
 
     }
 }
