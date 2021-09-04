@@ -1,4 +1,6 @@
-<?php namespace app\cow;
+<?php
+
+namespace App;
 
 class Cow extends Animals implements CowInterface
 {
