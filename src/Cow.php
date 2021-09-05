@@ -22,4 +22,9 @@ class Cow extends Animals implements CowInterface
     {
         $this->udder->buildMilk();
     }
+
+    public function getMilk()
+    {
+        return $this->udder->getMilk();
+    }
 }

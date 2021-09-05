@@ -14,10 +14,10 @@ class CowTest extends TestCase
     {
         $cow = new Cow(new Head(), new Udder());
 
-        $milk = $cow->buildMilk();
+        $cow->buildMilk();
+        $milk = $cow->getMilk();
 
-        //TODO: want milk to make cheese
-        $this->assertTrue($milk);
+        $this->assertIsInt($milk);
 
     }
 }

@@ -4,7 +4,15 @@ namespace App;
 
 class Udder
 {
-    public function buildMilk(): void
+    private int $milk;
+
+    public function buildMilk()
     {
+        $this->milk = rand(5, 10);
+    }
+
+    public function getMilk() : int
+    {
+        return $this->milk;
     }
 }
