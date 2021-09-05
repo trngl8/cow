@@ -23,7 +23,7 @@ class MilkTank
         $this->milkCount += $m;
 
         if($this->milkCount > self::MAX_CAPACITY) {
-            throw new \Exception(sprintf('Miltank is full/ Max capacity of this model is %d. You try to add %d. It is more than max capacity', self::MAX_CAPACITY, $m));
+            throw new \Exception(sprintf('Tank is full. Max capacity for this model is %d. You added %d, now capacity is %d', self::MAX_CAPACITY, $m, $this->milkCount));
         }
     }
 }
