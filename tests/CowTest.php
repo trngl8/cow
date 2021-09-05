@@ -2,11 +2,12 @@
 
 namespace App\Tests;
 
-use PHPUnit\Framework\TestCase;
-
+use App\MilkTank;
 use App\Cow;
 use App\Head;
 use App\Udder;
+
+use PHPUnit\Framework\TestCase;
 
 class CowTest extends TestCase
 {
@@ -17,7 +18,25 @@ class CowTest extends TestCase
         $cow->buildMilk();
         $milk = $cow->getMilk();
 
-        $this->assertIsInt($milk);
+        $b = new MilkTank();
+        $b->add($milk);
 
+        $this->assertIsInt($milk);
+    }
+
+    public function testMilkTankSuccess()
+    {
+        $b = new MilkTank();
+        $b->add(6);
+
+        $this->assertEquals(6, $b->getLevel());
+    }
+
+    public function testMilkTankException()
+    {
+        $this->expectException(\Exception::class);
+
+        $b = new MilkTank();
+        $b->add(641);
     }
 }
