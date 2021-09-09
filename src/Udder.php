@@ -6,9 +6,9 @@ class Udder
 {
     private int $milk;
 
-    public function buildMilk()
+    public function buildMilk(bool $buildMilk): void
     {
-        $this->milk = rand(5, 10);
+        $this->milk = $buildMilk ? random_int(5, 10) : 0;
     }
 
     public function getMilk() : int

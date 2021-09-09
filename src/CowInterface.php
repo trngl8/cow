@@ -4,6 +4,7 @@ namespace App;
 
 interface CowInterface
 {
-    public function eat();
-    public function buildMilk();
+    public function eat(): bool;
+    public function buildMilk(bool $buildMilk);
+    public function voice():? string;
 }
