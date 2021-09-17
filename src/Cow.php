@@ -11,20 +11,30 @@ class Cow extends Animals implements CowInterface
     {
         $this->head = $head;
         $this->udder = $udder;
+        $this->head->setVoice('Mooooo');
+
     }
 
-    public function eat()
+    public function eat(): bool
     {
-        $this->head->eat();
+        return $this->head->getEat();
     }
 
-    public function buildMilk()
+    public function buildMilk(bool $buildMilk): void
     {
-        $this->udder->buildMilk();
+        $this->udder->buildMilk($buildMilk);
     }
 
-    public function getMilk()
+    public function getMilk(): int
     {
         return $this->udder->getMilk();
+    }
+
+    public function voice(): ? string
+    {
+        if (!$this->eat() && !$this->getMilk()) {
+            return $this->head->getVoice();
+        }
+        return null;
     }
 }
