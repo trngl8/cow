@@ -3,13 +3,10 @@
 namespace App\Tests;
 
 use App\MilkTank;
-use App\Animals;
 use PHPUnit\Framework\TestCase;
 use App\Cow;
 use App\Head;
 use App\Udder;
-
-use PHPUnit\Framework\TestCase;
 
 class CowTest extends TestCase
 {
