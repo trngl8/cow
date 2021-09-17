@@ -5,18 +5,15 @@ namespace App\Tests;
 use App\MilkTank;
 use PHPUnit\Framework\TestCase;
 use App\Cow;
-use App\Head;
-use App\Udder;
 
 class CowTest extends TestCase
 {
     public function testCowSuccess()
     {
-        $head = new Head();
-        $head->setEat(false);
-        $udder = new Udder();
+        $cow = new Cow();
+        $sound = $cow->voice();
 
-        $cow = new Cow($head, $udder);
+        $this->assertEquals('muuuuuuu', $sound);
 
         $cow->buildMilk(true);
         $milk = $cow->getMilk();
@@ -42,15 +39,6 @@ class CowTest extends TestCase
 
         $b = new MilkTank();
         $b->add(641);
-
-       $this->assertIsBool($cow->eat());
-
-        $cow->buildMilk(false);
-        $this->assertIsString($cow->voice());
-        $this->assertEquals('Mooooo',$cow->voice());
-
-        $cow->buildMilk(true);
-        $this->assertNull($cow->voice());
-
     }
+
 }

@@ -5,7 +5,12 @@ namespace App;
 class Head
 {
     private bool $eat;
-    private ?string $voice = null;
+    public string $voice;
+
+    public function __construct()
+    {
+        $this->voice = 'muuuuuuu';
+    }
 
     public function getEat(): bool
     {
@@ -15,18 +20,6 @@ class Head
     public function setEat(bool $eat): self
     {
         $this->eat = $eat;
-
-        return $this;
-    }
-
-    public function getVoice():? string
-    {
-        return $this->voice;
-    }
-
-    public function setVoice($voice): self
-    {
-        $this->voice = $voice;
 
         return $this;
     }
