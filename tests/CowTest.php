@@ -2,19 +2,29 @@
 
 namespace App\Tests;
 
+use App\Animals;
 use App\MilkTank;
 use PHPUnit\Framework\TestCase;
 use App\Cow;
 
 class CowTest extends TestCase
 {
-    public function testCowSuccess()
+    public function testCowAnimal()
+    {
+        $cow = new Cow();
+
+        //Cow belongs to the class of animals.
+        $this->assertInstanceOf(Animals::class, $cow);
+    }
+
+    public function testCowFunctions()
     {
         $cow = new Cow();
         $sound = $cow->voice();
 
         $this->assertEquals('muuuuuuu', $sound);
 
+        //Cow can eat grass (herb) and produce milk.
         $cow->buildMilk(true);
         $milk = $cow->getMilk();
 
