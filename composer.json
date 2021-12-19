@@ -1,4 +1,6 @@
 {
+    "name": "trngl8/cow",
+    "description": "simple training demo-project for describing OOP Principles and paradigm",
     "type": "project",
     "license": "MIT",
     "require": {
