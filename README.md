@@ -30,7 +30,7 @@ $ composer install
 $ make tests
 ```
 
-4. Run con in command-line interface
+4. Run cow in command-line interface
 
 ```shell
 $ php start.php
