@@ -1,5 +1,14 @@
 # The Сow
 
+```
+ _     _
+((_____))
+[ x   x ]
+ \     /
+  (' ')
+   (U)
+```
+
 "The Cow" is a simple training demo-project for describing OOP Principles and paradigm.
 
 ### Basics
