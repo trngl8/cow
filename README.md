@@ -1,5 +1,9 @@
 # The Сow
 
+"The Cow" is a simple trainind demo-project for describing OOP Principies and paradigm.
+
+### Basics
+
 Cow belongs to the class of animals.
 
 Cow can eat grass (herb) and produce milk.
