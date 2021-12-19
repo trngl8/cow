@@ -2,22 +2,29 @@
 
 namespace App\Tests;
 
+use App\Animals;
 use App\MilkTank;
 use PHPUnit\Framework\TestCase;
 use App\Cow;
-use App\Head;
-use App\Udder;
 
 class CowTest extends TestCase
 {
-    public function testCowSuccess()
+    public function testCowAnimal()
     {
-        $head = new Head();
-        $head->setEat(false);
-        $udder = new Udder();
+        $cow = new Cow();
 
-        $cow = new Cow($head, $udder);
+        //Cow belongs to the class of animals.
+        $this->assertInstanceOf(Animals::class, $cow);
+    }
 
+    public function testCowFunctions()
+    {
+        $cow = new Cow();
+        $sound = $cow->voice();
+
+        $this->assertEquals('muuuuuuu', $sound);
+
+        //Cow can eat grass (herb) and produce milk.
         $cow->buildMilk(true);
         $milk = $cow->getMilk();
 
@@ -42,15 +49,6 @@ class CowTest extends TestCase
 
         $b = new MilkTank();
         $b->add(641);
-
-       $this->assertIsBool($cow->eat());
-
-        $cow->buildMilk(false);
-        $this->assertIsString($cow->voice());
-        $this->assertEquals('Mooooo',$cow->voice());
-
-        $cow->buildMilk(true);
-        $this->assertNull($cow->voice());
-
     }
+
 }

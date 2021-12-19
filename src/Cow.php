@@ -4,15 +4,16 @@ namespace App;
 
 class Cow extends Animals implements CowInterface
 {
+    private bool $hungry;
     private Head $head;
     private Udder $udder;
 
-    public function __construct(Head $head, Udder $udder)
+    public function __construct()
     {
-        $this->head = $head;
-        $this->udder = $udder;
-        $this->head->setVoice('Mooooo');
+        $this->head = new Head();
+        $this->udder = new Udder('full');
 
+        $this->hungry = true;
     }
 
     public function eat(): bool
@@ -30,11 +31,13 @@ class Cow extends Animals implements CowInterface
         return $this->udder->getMilk();
     }
 
-    public function voice(): ? string
+    //TODO: maybe action-style name (makeVoice, makeSound)
+    public function voice(): ?string
     {
-        if (!$this->eat() && !$this->getMilk()) {
-            return $this->head->getVoice();
+        if(!$this->hungry && 'full' != $this->udder->getStatus()) {
+            return null;
         }
-        return null;
+
+        return $this->head->voice;
     }
 }
