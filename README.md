@@ -29,3 +29,9 @@ $ composer install
 ```shell
 $ make tests
 ```
+
+4. Run con in command-line interface
+
+```shell
+$ php start.php
+```
