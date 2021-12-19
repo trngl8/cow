@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Cow extends Animals implements CowInterface
+class Cow extends Animal implements CowInterface
 {
     private bool $hungry;
     private Head $head;

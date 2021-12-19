@@ -2,7 +2,7 @@
 
 namespace App;
 
-abstract class Animals
+abstract class Animal
 {
     abstract public function voice():? string;
 }
