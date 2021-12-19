@@ -2,7 +2,7 @@
 
 namespace App\Tests;
 
-use App\Animals;
+use App\Animal;
 use App\MilkTank;
 use PHPUnit\Framework\TestCase;
 use App\Cow;
@@ -14,7 +14,7 @@ class CowTest extends TestCase
         $cow = new Cow();
 
         //Cow belongs to the class of animals.
-        $this->assertInstanceOf(Animals::class, $cow);
+        $this->assertInstanceOf(Animal::class, $cow);
     }
 
     public function testCowFunctions()
