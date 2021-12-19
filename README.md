@@ -1,6 +1,6 @@
 # The Сow
 
-"The Cow" is a simple trainind demo-project for describing OOP Principies and paradigm.
+"The Cow" is a simple training demo-project for describing OOP Principles and paradigm.
 
 ### Basics
 
