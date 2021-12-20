@@ -6,31 +6,31 @@ class Herd
 {
     private array $cows;
 
-    private int $step;
+    private int $sequenceStep;
 
     private int $position;
 
     public function __construct($limit, int $step = 1)
     {
-        $this->step = $step;
+        $this->sequenceStep = $step;
         $this->position = 0;
 
-        for ($i = 0; $i < $limit; $i += $this->step) {
+        for ($i = 0; $i < $limit; $i += $this->sequenceStep) {
             $cow = new Cow();
             $cow->log(sprintf("%s instance created", Cow::class));
 
-            $this->cows[] = $cow;
+            $this->cows[$i] = $cow;
         }
     }
 
-    public function add(Cow $animal)
+    public function add(Cow $animal) : Herd
     {
         $this->cows[] = $animal;
 
         return $this;
     }
 
-    public function move($position = 1)
+    public function move($position = 1) : Herd
     {
         $this->position += $position;
 

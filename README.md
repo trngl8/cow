@@ -19,6 +19,8 @@ Cow can eat grass (herb) and produce milk.
 
 Only female cows can produce milk.
 
+Other abilities will be described in the documentation ...
+
 ## How to set up
 1. Clone this repository and install dependencies
 
