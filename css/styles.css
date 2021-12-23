@@ -38,12 +38,31 @@ ul {
     padding-left: 0;
 }
 
-.conatainert {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+.logo {
+    font-size: 48px;
+    animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: var(--main-title-color);
+}
+
+.hero-title {
+    text-align: center;
+}
+.hero-sub__title {
+    text-align: center;
+}
+
+.row {
+    align-items: center;
+    align-content: center;
+}
+.row-cols-2 {
+    background-color: ;
+}
+
+.btn-primary {
+    background-color: #059150;
+}
+
+.hero__text {
+    margin-bottom: 10px;
 }
