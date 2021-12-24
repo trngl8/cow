@@ -37,7 +37,9 @@ ul {
     margin-bottom: 0;
     padding-left: 0;
 }
-
+.navbar {
+    margin-bottom: 50px;
+}
 .logo {
     font-size: 48px;
     animation: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -46,6 +48,7 @@ ul {
 
 .hero-title {
     text-align: center;
+    margin-bottom: 20px;
 }
 .hero-sub__title {
     text-align: center;
@@ -60,9 +63,36 @@ ul {
 }
 
 .btn-primary {
-    background-color: #059150;
+    background-color: lavender;
+    color: grey;
+    border-color: lavenderblush;
+    align-items: center;
+    justify-content: center;
+}
+.btn:hover {
+    color: lemonchiffon;
+    background-color: lightgray;
 }
 
 .hero__text {
     margin-bottom: 10px;
+}
+
+.icon-box {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.cow-icon {
+    margin-right: 5px;
+}
+
+.details__title {
+    margin-bottom: 15px;
+}
+.details__text {
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: normal;
+    margin-bottom: 5px;
 }
