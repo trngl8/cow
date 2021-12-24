@@ -8,4 +8,9 @@ class Sheep extends Animal
     {
         return "Beeee ";
     }
+
+    public function produceWool() : int
+    {
+        return rand(5,10);
+    }
 }
