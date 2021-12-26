@@ -4,20 +4,24 @@ namespace App;
 
 class Herd
 {
+    private string $type;
+
     private array $cows;
 
     private int $sequenceStep;
 
     private int $position;
 
-    public function __construct($limit, int $step = 1)
+    public function __construct(string $type, $limit, int $step = 1)
     {
+        $this->type = $type;
         $this->sequenceStep = $step;
         $this->position = 0;
 
         for ($i = 0; $i < $limit; $i += $this->sequenceStep) {
-            $cow = new Cow();
-            $cow->log(sprintf("%s instance created", Cow::class));
+            //TODO: try and raise an exception on fail
+            $cow = new $type();
+            $cow->log(sprintf("%s instance created", Animal::class));
 
             $this->cows[$i] = $cow;
         }
@@ -42,7 +46,7 @@ class Herd
         return $this->position;
     }
 
-    public function getCows() : array
+    public function getAnimals() : array
     {
         return $this->cows;
     }
