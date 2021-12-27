@@ -46,12 +46,16 @@ ul {
     color: var(--main-title-color);
 }
 
-.hero-title {
+.hero__title {
     text-align: center;
     margin-bottom: 20px;
 }
 .hero-sub__title {
     text-align: center;
+    margin-bottom: 300px;
+}
+.hero__box {
+    position: relative;
 }
 
 .row {
@@ -91,8 +95,27 @@ ul {
     margin-bottom: 15px;
 }
 .details__text {
-    font-size: 18px;
+    font-size: 16px;
     font-family: sans-serif;
     font-weight: normal;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
+
+.card {
+    margin-right: 30px;
+    border: none
+    
+}
+.cow-face {
+    font-size: 32px;
+    position: absolute;
+    top: 30px;
+    left: -130px;
+}
+@media screen and (min-width: 1080px) {
+    .cow-face {
+        left: 160px;
+        top: 20px;
+      }
+}
+
