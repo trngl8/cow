@@ -15,5 +15,8 @@ class HerdTest extends TestCase
         //check instance of herd item
         $item = $herd->getAnimals();
         $this->assertInstanceOf(Sheep::class, array_pop($item));
+
+        $herd->add(new Sheep());
+        $this->assertCount(101, $herd->getAnimals());
     }
 }
