@@ -15,7 +15,11 @@ class BeeTest extends TestCase
 
         $this->assertEquals('Bzzzz', $sound);
 
-        $bee->setType('queen');
-        $this->assertEquals('queen', $bee->getType());
+        $bee->setType('q');
+        $this->assertEquals('q', $bee->getType());
+
+        $this->expectException(\RuntimeException::class);
+        $bee->setType('u');
+
     }
 }
