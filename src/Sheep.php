@@ -6,7 +6,7 @@ class Sheep extends Animal
 {
     public function voice() : string
     {
-        return "Beeee ";
+        return "Beeee";
     }
 
     public function produceWool() : int

@@ -6,7 +6,7 @@ class Herd
 {
     private string $type;
 
-    private array $cows;
+    private array $animals;
 
     private int $sequenceStep;
 
@@ -20,16 +20,16 @@ class Herd
 
         for ($i = 0; $i < $limit; $i += $this->sequenceStep) {
             //TODO: try and raise an exception on fail
-            $cow = new $type();
-            $cow->log(sprintf("%s instance created", Animal::class));
+            $animal = new $this->type();
+            $animal->log(sprintf("%s instance created", Animal::class));
 
-            $this->cows[$i] = $cow;
+            $this->animals[$i] = $animal;
         }
     }
 
-    public function add(Cow $animal) : Herd
+    public function add(Animal $animal) : Herd
     {
-        $this->cows[] = $animal;
+        $this->animals[] = $animal;
 
         return $this;
     }
@@ -48,6 +48,6 @@ class Herd
 
     public function getAnimals() : array
     {
-        return $this->cows;
+        return $this->animals;
     }
 }
