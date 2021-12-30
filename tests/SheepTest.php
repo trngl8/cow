@@ -16,7 +16,7 @@ class SheepTest extends TestCase
 
         $this->assertEquals('Beeee', $sound);
 
-        $result = $animal->produceWool();
-        $this->assertIsInt($result);
+        $result = $animal->produce();
+        $this->assertGreaterThan(0, $result->getValue());
     }
 }

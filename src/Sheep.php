@@ -2,15 +2,15 @@
 
 namespace App;
 
-class Sheep extends Animal
+class Sheep extends Animal implements Produceble
 {
     public function voice() : string
     {
         return "Beeee";
     }
 
-    public function produceWool() : int
+    public function produce(): Product
     {
-        return rand(5,10);
+        return new Wool(rand(5,10));
     }
 }
