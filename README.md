@@ -11,6 +11,9 @@
 
 "The Cow" is a simple training demo-project for describing OOP Principles and paradigm.
 
+## Demo mode
+Simple demo locate here: [open demo](https://blockfarming.herokuapp.com/)
+
 ### Basics
 
 Cow belongs to the class of animals.
