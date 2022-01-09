@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Sheep extends Animal implements Produceble
+class Sheep extends Animal implements Produceable
 {
     public function voice() : string
     {

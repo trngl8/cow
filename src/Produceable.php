@@ -2,7 +2,7 @@
 
 namespace App;
 
-interface Produceble
+interface Produceable
 {
     public function produce() : Product;
 }
