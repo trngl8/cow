@@ -4,12 +4,21 @@ namespace App;
 
 require_once __DIR__.'/vendor/autoload.php';
 
-$herd = new Herd(Cow::class, 10);
-$herd->move(100);
+echo "===============================\n";
+echo "* Welcome to the Farm project * \n";
+echo "===============================\n";
+echo "\n";
 
-echo "Herd has " . count($herd->getAnimals()) . " items ".Cow::class." and ". $herd->getPosition() . " position ". "\n";
+$cowsCount = (int)readline('How many cows in herd?: ');
 
-$herd = new Herd(Sheep::class, 20);
-$herd->move(10);
+echo "\n\n";
 
-echo "Herd has " . count($herd->getAnimals()) . " items ".Sheep::class." and ". $herd->getPosition() . " position ". "\n";
+echo "Build cows:\n";
+$herd = new Herd(Cow::class, $cowsCount);
+
+$positionX= (int)readline('Set position to move: ');
+
+$herd->move($positionX);
+echo "Herd with $cowsCount cows moved to $positionX\n";
+
+echo "\n Thank you!";
